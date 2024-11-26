@@ -1,0 +1,556 @@
+*{
+    margin: 0%;
+    padding: 0;
+}
+header{
+    position: sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: baseline;
+    padding: 1%;
+    background-color: rgb(26, 42, 73);
+
+}
+header h1{
+color:white;
+text-transform: capitalize;
+animation-name: silde-top;
+animation-duration: 4s;
+animation-timing-function: cubic-bezier(0.68,-0.55,0.27,1.55);
+
+
+}
+nav {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    animation-name: nav-animation;
+    animation-duration: 4s;
+ animation-timing-function: ease-in-out;    
+}
+header a{
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 700;
+}
+section{
+    background-color:#A1C6EA;
+    height: 90vh;
+    display: flex;
+    justify-content:space-around;
+    padding-top: 5%;
+}
+.home-content{
+ width: 50%;
+ color: black;
+ font-weight: 900;
+
+}
+.home-content h1{
+    font-size: 3.5em;
+    animation-name: silde-left;
+    animation-duration: 5s;
+}
+.home-content h2{
+    font-size: 5em;
+    animation: silde-right 5s;
+}
+.home-content h3{
+    font-size: 3.5em;
+    animation-name: silde-left;
+    animation-duration: 5s;
+}
+.home-content p{
+    padding-top: 3%;
+    font-size: 1.8em;
+    animation: silde-right 5s;
+}
+.home-social{
+    padding-top: 3%;
+   display: flex;
+   width: 40%;
+   justify-content: space-between;
+   animation: logo 5s cubic-bezier(0.5,-1.25,0.75,0.05);
+}
+.home-social a{
+   
+    color: rgb(26, 42, 73);
+    font-size: 3em;
+    height: 3rem;
+    width: 14%;
+    border: 3px solid rgb(26, 42, 73);
+    border-radius: 50%;
+    padding: 7px;
+    margin-bottom: 3%;
+    
+}
+.home-social a:hover{
+    background-color: rgb(26, 42, 73);
+    color: white;
+    box-shadow: 0px 0px 50px rgb(26, 42, 73);
+}
+.btn1{
+    margin-top: 4%;
+    height: 7%;
+    width: 30%;
+    font-size: 1.2em;
+    border-radius: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: rgb(26, 42, 73);
+    border: none;
+    animation: btn1 4s cubic-bezier(0.075, 0.82, 0.165, 1);
+       
+
+}
+.btn1:hover{
+    
+    color:rgb(12, 12, 70);
+    box-shadow: 0px 0px 10px rgb(26, 42, 73),0px 0px  30px rgb(26, 42, 73),0px 0px 50px rgb(26, 42, 73),0px 0px  70px ;
+}
+
+.home-picture{
+   
+    height: 70vh;
+    width: 30%;
+     border-radius: 50%;
+    background: url(./WhatsApp\ Image\ 2024-11-16\ at\ 19.17.13_9347a6d9.jpg);
+    background-size: cover;
+    border-top: 20px solid #A1C6EA;
+    border-right: 20px solid  #587291;
+    border-bottom: 20px solid #A1C6EA;
+    border-left: 20px solid #587291;
+    box-shadow: 0px 0px 10px white,0px 0px 30px white,0px 0px 50px white,0px 0px 70px white,0px 0px 90px #587291 ;
+   position: relative;
+   
+}
+
+.about{
+    height: 90vh;
+    width: 100%;
+    background-color: rgb(34, 52, 78);
+     display: flex;
+    justify-content:space-around;
+    padding-top: 5%;
+    
+}
+.about-pic{
+    height: 50vh;
+    width: 20%;
+     border-radius: 50%;
+    background: url(./WhatsApp\ Image\ 2024-11-16\ at\ 19.17.13_9347a6d9.jpg);
+    background-size: cover;
+    border-top: 20px solid #A1C6EA;
+    border-right: 20px solid  #587291;
+    border-bottom: 20px solid #A1C6EA;
+    border-left: 20px solid #587291;
+    box-shadow: 0px 0px 10px white,0px 0px 30px white,0px 0px 50px white,0px 0px 70px white,0px 0px 90px #587291 ;
+     
+   
+}
+.about-content{
+    width: 50%;
+}
+.about-content h1{
+    font-size: 3em;
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 700;
+    
+
+}
+ .about-h1::first-letter{
+    color: white;
+    font-size: 2em;
+    text-shadow: 0px 0px 20px white;
+}
+
+.about-content p{
+    color: white;
+    text-transform: capitalize;
+    padding-top: 2%;
+    font-size: 1.4em;
+}
+.about-content-shotform{
+    border: 2px solid #A1C6EA;
+    margin-top: 2%;
+    columns: 2;
+   font-size:1.5em;   
+   text-transform: capitalize; 
+  padding: 2%;
+  box-shadow: inset 0px 0px 20px white;
+   
+}
+.about-content-shotform:hover{
+    background-color: rgb(73, 104, 104);
+    border: none;
+    box-shadow: 0px 0px 20px #587291;
+}
+.about-content-shotform h3{
+    padding-top: 2%;
+}
+b{
+    color: white;
+    font-size:1em;
+    text-transform: capitalize;
+}
+.skils{
+    height:95%;
+    width: 100%;
+    box-shadow: inset 0px 0px 30px 30px white,0px 0px 30px 30px grey;
+    padding-bottom: 5%;
+    background-color: #A1C6EA;
+   
+   
+}
+.skils h1{
+    padding-top: 5%;
+    text-align: center;
+     font-size: 6em;
+     background-color: transparent;
+}
+.skils-point1{
+   height: 100%;
+   width: 100%;
+ display: flex;
+ padding-top: 4%;
+ justify-content: center;align-items:baseline;
+
+}
+.skils-point2{
+   
+   position: relative;
+   left:6%;
+    height: 100%;
+    width: 90%;
+  display: flex;
+  justify-content: center;align-items: baseline;
+  padding-top: 4%;
+
+ 
+ 
+ }
+ .skils-point3{
+   
+  position: relative;
+  left: 4%;
+ height: 100%;
+    width: 95%;
+  display: flex;
+  justify-content: center;align-items: baseline; padding-top: 4%;
+ 
+ 
+ }
+ .skils-point4{
+ 
+  position: relative;
+
+ height: 100%;
+    width: 95%;
+  display: flex;
+  justify-content: center;align-items: baseline; padding-top: 2%;
+ 
+ 
+ left: 4%;
+ padding-bottom: 5%;
+ }
+ 
+ 
+
+.box1{
+ 
+    height: 20px;
+    width: 66%;
+    background-color:gainsboro;
+    border-radius: 30px;
+}
+.box2{
+ 
+    height: 20px;
+    width: 73%;
+    background-color:gainsboro;
+    border-radius: 30px;
+}
+.box1-inner{
+  
+   height: 100%;
+   width: 90%;
+    border-radius: 40px;
+    animation-name: box1;
+    animation-duration: 4s;
+    animation-iteration-count: initial;
+    background-color:orange;
+    
+    
+}
+.box2-inner{
+  
+    height: 100%;
+    width: 80%;
+     border-radius: 40px;
+     animation-name: box2;
+     animation-duration: 4s;
+     animation-iteration-count: initial;
+     background-color:aqua;
+     
+     
+ }
+ .box3{
+    margin-left: -10%;
+    height: 20px;
+    width: 70%;
+    background-color:gainsboro;
+    border-radius: 30px;
+}
+.box3-inner{
+  
+    height: 100%;
+    width: 85%;
+     border-radius: 40px;
+     animation-name: box3;
+     animation-duration: 4s;
+     animation-iteration-count: initial;
+     background-color:red;
+     
+     
+ }
+ .box4{
+    margin-top: 4%;
+    height: 20px;
+    width: 70%;
+    background-color:gainsboro;
+    border-radius: 30px;
+    margin-left: -4%;
+}
+.box4-inner{
+  
+    height: 100%;
+    width: 75%;
+     border-radius: 40px;
+     animation-name: box4;
+     animation-duration: 4s;
+     animation-iteration-count: initial;
+     background-color:green;
+     
+     
+ }
+ .skils-name{
+    font-size: 3em;
+    text-shadow: 0px 7px 10px gray;
+   
+ }
+ 
+ .js{
+    position: relative;
+    right: 181px;
+ }
+ .react{
+    position: relative;
+    right: 80px;
+ }
+
+.project{
+      width: 100%;
+      height: 80vh;
+      background-color: rgb(34, 52, 78);
+     text-align: center;
+     padding-top: 5%;
+}
+.project h1{
+    font-size: 5em;
+    text-transform: uppercase;
+}
+.projectLists{
+    padding-top: 5%;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.list{
+    height: 50vh;
+    width: 30%;
+    background-color:#A1C6EA;
+    border-radius: 10px;
+    
+   
+}
+.project-img{
+    width: 100%;
+    height: 100%;
+    
+}
+.list:hover{
+    background-color: azure;
+    box-shadow:0px 0px 40px white ;
+    border-left: 5px solid #A1C6EA;
+    border-right: 5px solid #A1C6EA;
+    position: relative;
+    bottom: 30px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    
+    
+}
+
+
+
+
+@keyframes box1 {
+    0%{
+       
+        background-color:orange;
+        transform: scaleX(100px);
+        width: 0%;
+    
+    }
+    100%{
+   opacity: 1;
+     width: 90%;
+     background-color:orange;
+     box-shadow: -0px -5px 10px gray;
+     transition: 4s;
+     
+    }
+    
+}
+
+@keyframes box2 {
+    0%{
+       
+        background-color:aqua;
+        transform: scaleX(100px);
+        width: 0%;
+    
+    }
+    100%{
+   opacity: 1;
+     width: 80%;
+     background-color:aqua;
+     box-shadow: -0px -5px 10px gray;
+     transition: 4s;
+     
+    
+    }
+    
+}
+
+
+@keyframes box3 {
+    0%{
+       
+        background-color:red;
+        transform: scaleX(100px);
+        width: 0%;
+    
+    }
+    100%{
+   opacity: 1;
+     width: 85%;
+     background-color:red;
+     box-shadow: -0px -5px 10px gray;
+     transition: 4s;
+     
+    
+    }
+    
+}
+@keyframes box4 {
+    0%{
+       
+        background-color:green;
+        transform: scaleX(100px);
+        width: 0%;
+    
+    }
+    100%{
+   opacity: 1;
+     width: 75%;
+     background-color:green;
+     box-shadow: -0px -5px 10px gray;
+     transition: 4s;
+     
+    
+    }
+    
+}
+
+
+
+
+
+
+
+@keyframes silde-top {
+        0%{
+            transform: translateX(0px);
+            opacity: 0;
+        }
+        50%{
+            opacity: 1;
+            transform: translateX(100px);
+
+        }
+}
+@keyframes nav-animation {
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+       
+    }
+    100%{
+        opacity: 1;
+     transform: translateY(0px);
+        
+    }
+    
+}
+@keyframes silde-left {
+  0%{
+    opacity: 0;
+    transform: translateY(-200px);
+  }
+  100%{
+    transform: translateY(0px);
+    transition: 4s;
+  }
+
+    
+}
+@keyframes silde-right{
+    0%{
+        opacity: 0;
+        transform: translateX(1300px);
+    }
+    100%{
+        opacity: 1;
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+}
+
+  @keyframes btn1 {
+     0%{
+        opacity: 0;
+        transform: translateY(200px);
+        
+     }
+     100%{
+        opacity: 1;
+        transform: translateY(0);
+        animation-delay: 5s;
+        
+     }
+  }
+   
+  @keyframes  logo{
+    0%{
+        opacity: 0;
+       margin-left:-199px ;
+    }
+    100%{
+        opacity: 1;
+       
+    }
+  }    
