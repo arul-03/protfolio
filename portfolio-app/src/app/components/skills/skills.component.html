@@ -1,0 +1,21 @@
+<section id="skills" class="section skills">
+  <div class="container">
+    <div class="section-header reveal" #reveal>
+      <span class="section-tag">skills</span>
+      <h2>tech-stack.json</h2>
+    </div>
+
+    <div class="skills-grid">
+      @for (category of portfolio.skills; track category.title; let i = $index) {
+        <div class="skill-card reveal" #reveal [style.animation-delay]="i * 0.1 + 's'">
+          <h3>{{ category.title }}</h3>
+          <div class="skill-tags">
+            @for (skill of category.items; track skill) {
+              <span class="skill-tag">{{ skill }}</span>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,133 @@
+.experience {
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border);
+}
+
+.timeline {
+  position: relative;
+  padding-left: 1.75rem;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+  }
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 1.75rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -1.75rem;
+  top: 0.6rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background: var(--accent-green);
+  border: 2px solid var(--bg-surface);
+  transform: translateX(-5px) rotate(45deg);
+}
+
+.timeline-content {
+  padding: 1.25rem;
+  background: var(--bg-base);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-color: var(--accent-green);
+  }
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+
+  h3 {
+    font-family: var(--font-mono);
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .period {
+    font-family: var(--font-mono);
+    color: var(--accent-green);
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+    background: rgba(63, 185, 80, 0.1);
+    border: 1px solid var(--accent-green-dim);
+    border-radius: var(--radius-sm);
+  }
+}
+
+.role {
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.project-block {
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--border);
+
+  h4 {
+    font-family: var(--font-mono);
+    color: var(--accent-blue);
+    font-size: 0.85rem;
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+
+    &::before {
+      content: 'class ';
+      color: var(--text-muted);
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      font-family: var(--font-mono);
+      color: var(--text-secondary);
+      padding: 0.25rem 0 0.25rem 1rem;
+      position: relative;
+      line-height: 1.6;
+      font-size: 0.8rem;
+
+      &::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: var(--accent-green);
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline {
+    padding-left: 1.25rem;
+  }
+
+  .timeline-item {
+    padding-left: 1.25rem;
+  }
+}

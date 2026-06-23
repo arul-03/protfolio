@@ -1,0 +1,16 @@
+<header class="header" [class.scrolled]="scrolled()">
+  <a href="#home" class="logo" (click)="closeMenu()">
+    <span class="logo-bracket">&lt;</span>ARUL<span class="logo-accent">/</span><span class="logo-bracket">&gt;</span>
+  </a>
+
+  <button class="menu-toggle" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()" aria-label="Toggle menu">
+    <span [class.open]="menuOpen()"></span>
+  </button>
+
+  <nav class="nav" [class.open]="menuOpen()">
+    @for (link of navLinks; track link.href) {
+      <a [href]="link.href" (click)="closeMenu()">{{ link.label }}</a>
+    }
+    <a href="#contact" class="nav-cta" (click)="closeMenu()">Hire Me</a>
+  </nav>
+</header>

@@ -1,0 +1,83 @@
+<section id="home" class="hero">
+  <app-three-background />
+
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="terminal-prompt animate-in">
+        <span class="prompt-user">arul&#64;dev</span><span class="prompt-sep">:</span><span class="prompt-path">~/portfolio</span><span class="prompt-sep">$</span>
+        <span class="prompt-cmd"> whoami</span>
+      </div>
+
+      <h1 class="hero-name animate-in delay-1">{{ portfolio.name }}</h1>
+
+      <div class="hero-role animate-in delay-2">
+        <span class="role-prefix">&gt;</span>
+        <span class="role-text">{{ typedText }}</span><span class="cursor">_</span>
+      </div>
+
+      <p class="hero-desc animate-in delay-3">{{ portfolio.summary.slice(0, 180) }}...</p>
+
+      <div class="hero-meta animate-in delay-3">
+        <span class="meta-chip">
+          <span class="dot"></span> Open to work
+        </span>
+        <span class="meta-chip">{{ portfolio.location }}</span>
+      </div>
+
+      <div class="hero-actions animate-in delay-4">
+        <button class="btn btn-primary" (click)="downloadResume()">
+          <span class="btn-icon">↓</span>
+          download_resume.pdf
+        </button>
+        <button class="btn btn-outline" (click)="scrollToContact()">
+          <span class="btn-icon">→</span>
+          contact.send()
+        </button>
+      </div>
+
+      <div class="hero-links animate-in delay-5">
+        <a [href]="'mailto:' + portfolio.email" class="dev-link">
+          <span class="link-key">email</span><span class="link-val">{{ portfolio.email }}</span>
+        </a>
+        <a [href]="'tel:' + portfolio.phone" class="dev-link">
+          <span class="link-key">phone</span><span class="link-val">{{ portfolio.phone }}</span>
+        </a>
+        <a [href]="portfolio.linkedin" target="_blank" rel="noopener" class="dev-link">
+          <span class="link-key">linkedin</span><span class="link-val">connect →</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="code-window animate-in delay-2">
+      <div class="window-bar">
+        <div class="window-dots">
+          <span class="dot-red"></span>
+          <span class="dot-yellow"></span>
+          <span class="dot-green"></span>
+        </div>
+        <span class="window-title">developer.ts</span>
+        <span class="window-lang">TypeScript</span>
+      </div>
+      <div class="code-body">
+        <div class="line-numbers">
+          @for (line of codeLines; track $index) {
+            <span>{{ $index + 1 }}</span>
+          }
+        </div>
+        <pre class="code-content"><code>@for (line of codeLines; track $index; let i = $index) {
+<span class="code-line" [class.visible]="i < visibleLines">@for (part of line.parts; track part.text) {<span [class]="part.type">{{ part.text }}</span>}</span>
+}</code></pre>
+      </div>
+      <div class="window-status">
+        <span>Ln {{ visibleLines }}, Col 1</span>
+        <span>UTF-8</span>
+        <span>TypeScript</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>

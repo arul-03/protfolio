@@ -1,0 +1,107 @@
+.projects {
+  background: var(--bg-base);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.project-card {
+  padding: 1.25rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: all 0.25s ease;
+  cursor: default;
+
+  &:hover {
+    border-color: var(--accent-blue);
+    transform: translateY(-4px);
+  }
+
+  .project-icon {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--accent-orange);
+    margin-bottom: 0.75rem;
+
+    &::before {
+      content: 'repo: ';
+      color: var(--text-muted);
+    }
+  }
+
+  h3 {
+    font-family: var(--font-mono);
+    color: var(--text-primary);
+    font-size: 1rem;
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+  }
+
+  p {
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+
+  span {
+    font-family: var(--font-mono);
+    padding: 0.2rem 0.5rem;
+    background: var(--bg-elevated);
+    color: var(--accent-purple);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 0.7rem;
+  }
+}
+
+.education-block {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.edu-card {
+  padding: 1.25rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-color: var(--accent-green);
+  }
+
+  h3 {
+    font-family: var(--font-mono);
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+    font-weight: 600;
+  }
+
+  p {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+  }
+
+  .cgpa {
+    display: inline-block;
+    margin-top: 0.6rem;
+    font-family: var(--font-mono);
+    color: var(--accent-green);
+    font-size: 0.75rem;
+  }
+}
