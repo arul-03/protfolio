@@ -27,9 +27,25 @@ Open [http://localhost:4200](http://localhost:4200)
 npm run build
 ```
 
-Output: `dist/portfolio-app/`
+Output: `dist/portfolio-app/browser/`
 
-## Email Setup (Optional)
+## Deploy to Vercel
+
+This repo includes `vercel.json` at the root. Push to GitHub and redeploy.
+
+**Vercel project settings (recommended):**
+
+| Setting | Value |
+|---------|--------|
+| Root Directory | `portfolio-app` |
+| Build Command | `npm run build` |
+| Output Directory | `dist/portfolio-app/browser` |
+| Install Command | `npm install` |
+
+If Root Directory is left empty, the root `vercel.json` handles the build automatically.
+
+**Why the 404 happened:** Angular 19 puts the built site in `dist/portfolio-app/browser/`, not `dist/portfolio-app/`. Vercel was serving an empty/wrong folder.
+
 
 For direct form sending without opening the email client:
 

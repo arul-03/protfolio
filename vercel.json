@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "cd portfolio-app && npm install",
+  "buildCommand": "cd portfolio-app && npm run build",
+  "outputDirectory": "portfolio-app/dist/portfolio-app/browser",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
