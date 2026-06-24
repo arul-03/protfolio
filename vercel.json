@@ -1,0 +1,11 @@
+{
+  "installCommand": "npm install --prefix portfolio-app",
+  "buildCommand": "npm run build --prefix portfolio-app",
+  "outputDirectory": "portfolio-app/dist/portfolio-app/browser",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
